@@ -10,7 +10,42 @@
 
 **TO DO**: Take the content of the “USE WITH AUTOMATIONS: Working days activities throughout a Sprint” (see below) and split it up in which space on the Agility Game board it takes place with which actors. This maps a real-life scenario to a gamified environment. For example, the Sprint Planning activities should be made possible by the Sprint Planning Management microservice, hosted in the Agility Game’s sprint-planning-management repository.
 
-=== Working days activities throughout a Sprint ===
+## Sprint Planning
+
+See https://github.com/agility-game/sprint-planning-management (currently https://github.com/vanHeemstraSystems/sprint-planning-management)
+
+### Sprint 14: User Dashboard Enhancement - Developer Journal
+
+**Sprint Goal:** Implement real-time notification system, fix critical data export bug, and refactor authentication service for better maintainability.
+
+**Team:** 5 developers, Product Owner (Sarah), Scrum Master (Mike)
+**My Role:** Full-stack developer, focus on backend services and API integration
+
+-----
+
+## Week 1: Planning & Foundation
+
+### Monday, March 3rd - Sprint Planning & AI Workflow Setup
+
+**9:00 AM - Sprint Planning Meeting**
+
+Sarah (PO) presents three main items for this sprint:
+
+1. **Feature Request from Enterprise Client:** “Users need real-time notifications for critical system events - they’re missing important updates and it’s impacting their operations.”
+1. **Critical Bug:** Data export function is corrupting Excel files with special characters
+1. **Technical Debt:** Authentication service has grown unwieldy and needs refactoring
+
+I use **SuperWhisper** during the meeting to capture requirements:
+
+*“Real-time notifications needed for user dashboard. Enterprise client Acme Corp losing critical alerts. Requirements include browser notifications, email fallback, notification preferences, and admin controls for notification types. Export bug affecting 23% of users with international names containing special characters. Auth service currently 2,400 lines, needs modular refactor for maintainability.”*
+
+## Issue Management
+
+See https://github.com/agility-game/issue-management (currently https://github.com/vanHeemstraSystems/issue-management)
+
+MORE
+
+================================================================================= Working days activities throughout a Sprint ==========================================================================================
 
 —- prompt
 
