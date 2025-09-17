@@ -1,6 +1,6 @@
 # Documentation
 
-Read the Docs: [vanHeemstraSystems-scenarios-management](https://vanHeemstraSystems-scenarios-management.readthedocs.io/en/latest/)
+Read the Docs: [agility-games-scenarios-management](https://agility-games-scenarios-management.readthedocs.io/en/latest/)
 
 ## 100 - Install ReadTheDocs
 
@@ -79,4 +79,4 @@ On [ReadTheDocs](https://readthedocs.org/), after logging in navigate to your Gi
 
 ## 1000 - View the Documentation
 
-Visit https://vanHeemstraSystems-scenarios-management.readthedocs.io/en/latest/
+Visit https://agility-games-scenarios-management.readthedocs.io/en/latest/
