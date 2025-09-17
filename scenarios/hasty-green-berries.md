@@ -24,9 +24,9 @@ See https://github.com/agility-game/sprint-planning-management (currently https:
 
 -----
 
-## Week 1: Planning & Foundation
+### Week 1: Planning & Foundation
 
-### Monday, March 3rd - Sprint Planning & AI Workflow Setup
+#### Monday, March 3rd - Sprint Planning & AI Workflow Setup
 
 **9:00 AM - Sprint Planning Meeting**
 
