@@ -1,8 +1,8 @@
 # Configuration file for the Sphinx documentation builder.
 
 # -- Project information -----------------------------------------------------
-project = 'Your Project Name'
-copyright = '2025 - present, van Heemstra Systems'
+project = 'Scenarios Management'
+copyright = '2025 - present, Agility Game'
 author = 'Willem van Heemstra'
 
 release = '0.1'
