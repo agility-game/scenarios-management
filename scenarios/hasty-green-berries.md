@@ -19,6 +19,7 @@ See https://github.com/agility-game/sprint-planning-management (currently https:
 **Sprint Goal:** Implement real-time notification system, fix critical data export bug, and refactor authentication service for better maintainability.
 
 **Team:** 5 developers, Product Owner (Sarah), Scrum Master (Mike)
+
 **My Role:** Full-stack developer, focus on backend services and API integration
 
 -----
