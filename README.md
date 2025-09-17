@@ -22,7 +22,7 @@ repository-name
 
 **Executive Summary**
 
-Scenarios here are real-life trajectories that include one or more managements (e.g., Sprint Planning Management). By reading these scenarios the reader learns when and where the actor(s) in that scenario engage with the other managements, and so learns how he or she can make use of the managements to reach their goal. For example, a [scenario that includes the Sprint Planning upto and including the Sprint Retrospective](https://github.com/agility-game/scenarios-management/blob/main/scenarios/hasty-green-berries.md) describes the actors, the activities, the tools, and the interfaces that are being used to successfully complete this scenario. The span of managements involved can be wider or smaller.
+Scenarios here are real-life trajectories that include one or more managements (e.g., Sprint Planning Management). By reading these scenarios the reader learns when and where the actor(s) in that scenario engage with the other managements, and so learns how he or she can make use of the managements to reach their goal. For example, a [scenario that includes the Sprint Planning upto and including the Sprint Retrospective](https://github.com/agility-game/scenarios-management/blob/main/scenarios/hasty-green-berries.md) describes the actors, the activities, the tools, and the interfaces that are being used to successfully complete this scenario. The span of managements involved can be wider or smaller per scenario.
 
 Generated with [Rytr](https://app.rytr.me)
 
