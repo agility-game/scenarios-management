@@ -52,6 +52,8 @@ Location on the board where this takes place: [Stories](./index)
 
 Back at my desk, I open **Claude.AI** and paste the SuperWhisper transcript:
 
+Next I give instructions to **Claude.AI** via [Superwhisper](https://github.com/vanHeemstraSystems/superwhisper):
+
 > **Me:** “Based on these requirements, help me break this down into properly structured GitHub issues using our workflow standards.”
 
 **Claude generates three main issues:**
