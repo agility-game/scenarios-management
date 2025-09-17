@@ -55,12 +55,12 @@ Back at my desk, I open **Claude.AI** and paste the SuperWhisper transcript:
 > Follow the instructions to create a Custom Mode in Superwhisper that assists you in breaking down requirements into properly structured GitHub issues using workflow standards.
 > See https://superwhisper.com/docs/modes/custom
 
-#####
-#  Custom Mode for Requirements Breakdown
-#  
-#  TO DO
-#
-#####
+/////
+/  Custom Mode for Requirements Breakdown
+/  
+/  TO DO
+/
+/////
 
 Next I give instructions to **Claude.AI** via [Superwhisper](https://github.com/vanHeemstraSystems/superwhisper):
 
