@@ -44,6 +44,66 @@ I use **SuperWhisper** during the meeting to capture requirements:
 
 See https://github.com/agility-game/issue-management (currently https://github.com/vanHeemstraSystems/issue-management)
 
+**10:30 AM - AI-Assisted Issue Creation**
+
+Back at my desk, I open **Claude.AI** and paste the SuperWhisper transcript:
+
+> **Me:** “Based on these requirements, help me break this down into properly structured GitHub issues using our workflow standards.”
+
+**Claude generates three main issues:**
+
+I review and approve, then tell **Augment Code:**
+
+> **Me:** “Create these GitHub issues with proper labels and structure.”
+
+**Augment creates:**
+
+- Issue #156: 🚀 Implement real-time notification system for user dashboard
+- Issue #157: 🐛 Fix Excel export corruption with special characters
+- Issue #158: 🔧 Refactor authentication service for modularity
+
+Each issue includes context, acceptance criteria, and proper labeling (type:feature, prio:high, theme:notifications, size:l, etc.)
+
+**11:00 AM - TrackDown Integration**
+
+```bash
+./trackdown.sh pull  # Sync from GitHub
+./trackdown.sh assign 156 john@company.com
+./trackdown.sh assign 157 john@company.com
+./trackdown.sh assign 158 john@company.com
+```
+
+**TrackDown automatically creates local markdown entries:**
+
+```markdown
+## Issue #156: 🚀 Implement real-time notification system [OPEN] [HIGH]
+**Created:** 2025-03-03
+**Assigned:** john@company.com
+
+Enterprise client needs real-time notifications for critical system events.
+Current users missing important updates impacting operations.
+
+**Requirements:**
+- Browser push notifications
+- Email fallback system
+- User notification preferences
+- Admin controls for notification types
+- Notification history/audit log
+
+**Acceptance Criteria:**
+- [ ] WebSocket connection for real-time updates
+- [ ] Notification preferences UI
+- [ ] Email fallback service integration
+- [ ] Admin notification management
+- [ ] Browser notification permission handling
+
+**Labels:** type:feature, prio:high, theme:notifications, size:l, status:to-do
+```
+
+
+== WE ARE HERE ==
+
+
 MORE
 
 ================================================================================= Working days activities throughout a Sprint ==========================================================================================
