@@ -14,6 +14,8 @@
 
 See https://github.com/agility-game/sprint-planning-management (currently https://github.com/vanHeemstraSystems/sprint-planning-management)
 
+Location on the board where this takes place: [Features](./index)
+
 ### Sprint 14: User Dashboard Enhancement - Developer Journal
 
 **Sprint Goal:** Implement real-time notification system, fix critical data export bug, and refactor authentication service for better maintainability.
