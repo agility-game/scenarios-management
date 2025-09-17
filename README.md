@@ -1,7 +1,7 @@
-[![Quarto Publish](https://github.com/vanHeemstraSystems/REPOSITORY-NAME/actions/workflows/publish.yml/badge.svg)](https://github.com/vanHeemstraSystems/REPOSITORY-NAME/actions/workflows/publish.yml)
+[![Quarto Publish](https://github.com/agility-game/scenarios-management/actions/workflows/publish.yml/badge.svg)](https://github.com/agility-game/scenarios-management/actions/workflows/publish.yml)
 
-repository-name
-# Repository Name
+scenarios-management
+# Scenarios Management
 
 > Slugline
 
