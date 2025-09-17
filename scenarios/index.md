@@ -7,3 +7,7 @@
 Scenarios take place in one or more spaces of the Agility Game (see above for the available spaces on the Agility Gameboard).
 
 For example, Sprint Planning takes place at the "Product Management Group".
+
+| Scenario | Description |
+| --- | --- |
+| [hasty-green-berries](./hasty-green-berries.md) | .. |
