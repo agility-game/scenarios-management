@@ -2,8 +2,8 @@
 
 ## Agility Game Groupings
 
-<img width="1434" height="805" alt="Image" src="https://github.com/user-attachments/assets/e548d639-30e8-4536-83e0-cf4bd8e15d59" />
+<img width="1431" height="803" alt="Image" src="https://github.com/user-attachments/assets/5a13b3d1-e8fe-4acb-a0ea-8452ebd5b7f7" />
 
 Scenarios take place in one or more spaces of the Agility Game (see above for the available spaces on the Agility Gameboard).
 
-For example, Sprint Planning takes place at space "".
+For example, Sprint Planning takes place at the "Project Management Grouping".
