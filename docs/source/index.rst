@@ -1,5 +1,5 @@
-Welcome to Your Project Documentation
-======================================
+Welcome to Scenarios Management
+===============================
 
 .. toctree::
    :maxdepth: 2
