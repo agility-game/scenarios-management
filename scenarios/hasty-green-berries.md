@@ -10,7 +10,7 @@
 
 **TO DO**: Take the content of the “USE WITH AUTOMATIONS: Working days activities throughout a Sprint” (see below) and split it up in which space on the Agility Game board it takes place with which actors. This maps a real-life scenario to a gamified environment. For example, the Sprint Planning activities should be made possible by the Sprint Planning Management microservice, hosted in the Agility Game’s sprint-planning-management repository.
 
-## Sprint Planning
+## [Sprint Planning](./index.md)
 
 See https://github.com/agility-game/sprint-planning-management (currently https://github.com/vanHeemstraSystems/sprint-planning-management)
 
@@ -40,7 +40,7 @@ I use **SuperWhisper** during the meeting to capture requirements:
 
 *“Real-time notifications needed for user dashboard. Enterprise client Acme Corp losing critical alerts. Requirements include browser notifications, email fallback, notification preferences, and admin controls for notification types. Export bug affecting 23% of users with international names containing special characters. Auth service currently 2,400 lines, needs modular refactor for maintainability.”*
 
-## Issue Management
+## [Issue Management](./index.md)
 
 See https://github.com/agility-game/issue-management (currently https://github.com/vanHeemstraSystems/issue-management)
 
