@@ -33,8 +33,8 @@ See https://github.com/agility-game/sprint-planning-management (currently https:
 Sarah (PO) presents three main items for this sprint:
 
 1. **Feature Request from Enterprise Client:** “Users need real-time notifications for critical system events - they’re missing important updates and it’s impacting their operations.”
-1. **Critical Bug:** Data export function is corrupting Excel files with special characters
-1. **Technical Debt:** Authentication service has grown unwieldy and needs refactoring
+1. **Critical Bug:** Data export function is corrupting Excel files with special characters.
+1. **Technical Debt:** Authentication service has grown unwieldy and needs refactoring.
 
 I use **SuperWhisper** during the meeting to capture requirements:
 
