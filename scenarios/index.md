@@ -10,4 +10,4 @@ For example, Sprint Planning takes place at the "Product Management Group".
 
 | Scenario | Description |
 | --- | --- |
-| [hasty-green-berries](./hasty-green-berries.md) | .. |
+| [hasty-green-berries](./hasty-green-berries.md) | This scenario covers a full two-week Sprint from Sprint Planning to Retrospective. During this Sprint a bug gets fixed, a feature gets implemented, and existing code gets refactored. |
