@@ -38,7 +38,7 @@ Sarah (PO) presents three main items for this sprint:
 1. **Critical Bug:** Data export function is corrupting Excel files with special characters.
 1. **Technical Debt:** Authentication service has grown unwieldy and needs refactoring.
 
-I use **SuperWhisper** during the meeting to capture requirements:
+I use **[SuperWhisper](https://github.com/vanHeemstraSystems/superwhisper)** during the meeting to capture requirements:
 
 *“Real-time notifications needed for user dashboard. Enterprise client Acme Corp losing critical alerts. Requirements include browser notifications, email fallback, notification preferences, and admin controls for notification types. Export bug affecting 23% of users with international names containing special characters. Auth service currently 2,400 lines, needs modular refactor for maintainability.”*
 
