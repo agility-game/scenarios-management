@@ -55,9 +55,12 @@ Back at my desk, I open **Claude.AI** and paste the SuperWhisper transcript:
 > Follow the instructions to create a Custom Mode in Superwhisper that assists you in breaking down requirements into properly structured GitHub issues using workflow standards.
 > See https://superwhisper.com/docs/modes/custom
 
-| Custom Mode for Requirements Breakdown |
-| --- |
-| TO DO |
+| Custom Mode for Requirements Breakdown | |
+| --- | --- |
+| Referencing Content | When writing AI instructions for use in Superwhisper, you can direct AI’s attention to specific content using these naming conventions:  TO DO |
+| Writing Effective Instructions | Clear Purpose, Requirements, Structure, Keep Simple: TO DO |
+| Using XML Tags | For complex, multi-step instructions, structuring your prompt with XML tags can help communicate clearly with the AI: TO DO |
+| Add Examples | Examples help you teach AI exactly how to process your input and what kind of output you expect. You can add these directly in the Advanced Settings sidebar of your selected mode.: TO DO |
 
 Next I give instructions to **Claude.AI** via [Superwhisper](https://github.com/vanHeemstraSystems/superwhisper):
 
