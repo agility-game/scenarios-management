@@ -6,4 +6,4 @@
 
 Scenarios take place in one or more spaces of the Agility Game (see above for the available spaces on the Agility Gameboard).
 
-For example, Sprint Planning takes place at the "Project Management Grouping".
+For example, Sprint Planning takes place at the "Project Management Group".
