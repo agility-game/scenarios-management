@@ -46,6 +46,8 @@ I use **SuperWhisper** during the meeting to capture requirements:
 
 See https://github.com/agility-game/issue-management (currently https://github.com/vanHeemstraSystems/issue-management)
 
+Location on the board where this takes place: [Stories](./index)
+
 **10:30 AM - AI-Assisted Issue Creation**
 
 Back at my desk, I open **Claude.AI** and paste the SuperWhisper transcript:
