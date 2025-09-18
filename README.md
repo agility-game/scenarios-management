@@ -26,7 +26,7 @@ Scenarios here are real-life trajectories that include one or more managements (
 
 Generated with [Rytr](https://app.rytr.me)
 
-<img width="1475" height="789" alt="Image" src="https://github.com/user-attachments/assets/ea8b73b3-6bdb-4e33-8c14-e306956464fe" />
+<img width="1395" height="897" alt="Image" src="https://github.com/user-attachments/assets/3f8a2721-926a-4f5b-856e-1bbe8e4d7511" />
 
 <table>
 <th colspan="5">Summarize with:</th><tr/> 
