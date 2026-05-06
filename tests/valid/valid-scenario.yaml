@@ -1,1 +1,24 @@
+schema_version: 1.0.0
 
+id: simple-python-kata
+
+title: Simple Python Kata
+
+type: kata
+
+difficulty: beginner
+
+source:
+  kind: embedded
+
+spaces:
+  primary:
+    - refactoring
+
+missions:
+  - id: mission-01
+    title: Refactor
+    objective: Improve readability
+
+success_criteria:
+  - tests pass
