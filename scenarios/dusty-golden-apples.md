@@ -3,6 +3,8 @@ $schema: https://raw.githubusercontent.com/agility-game/scenarios-management/mai
 
 schema_version: 1.0.0
 
+schema_kind: agility-game-scenario
+
 id: dusty-golden-apples
 
 title: Dusty Golden Apples
@@ -44,6 +46,25 @@ recommended_ai_employees:
   - marcus-rodriguez
   - sarah-chen
   - jenkins
+
+missions:
+  - id: mission-01-understand
+    title: Understand Current Behavior
+    objective: Read and analyze the legacy code before changing anything.
+
+  - id: mission-02-tests
+    title: Add Characterization Tests
+    objective: Protect the current behavior with tests.
+
+  - id: mission-03-refactor
+    title: Refactor Safely
+    objective: Improve readability and maintainability while preserving behavior.
+
+success_criteria:
+  - behavior preserved
+  - tests pass
+  - readability improved
+  - complexity reduced
 ---
 
 # Dusty Golden Apples
