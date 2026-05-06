@@ -2,17 +2,17 @@
   "$schema": "http://json-schema.org/draft-07/schema#",
   "$id": "https://raw.githubusercontent.com/agility-game/scenarios-management/main/schemas/scenario.schema.json",
   "title": "Agility Game Scenario",
-  "description": "Schema for playable Agility Game scenarios, including katas, buggy codebases, missions, scoring, spaces, and required capabilities.",
+  "description": "Schema for playable Agility Game scenarios.",
   "type": "object",
   "additionalProperties": false,
   "required": [
+    "schema_version",
     "id",
     "title",
     "type",
     "difficulty",
     "source",
     "spaces",
-    "required_capabilities",
     "missions",
     "success_criteria"
   ],
@@ -20,30 +20,54 @@
     "$schema": {
       "type": "string"
     },
-    "id": {
+
+    "schema_version": {
       "type": "string",
-      "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$",
-      "examples": ["gilded-rose-python"]
+      "examples": ["1.0.0"]
     },
+
+    "id": {
+      "$ref": "#/$defs/slug"
+    },
+
     "title": {
       "type": "string",
       "minLength": 3
     },
-    "type": {
-      "type": "string",
-      "enum": ["kata", "buggy-codebase", "case-study", "simulation", "workshop", "challenge"]
-    },
-    "language": {
-      "type": "string",
-      "examples": ["python"]
-    },
-    "difficulty": {
-      "type": "string",
-      "enum": ["beginner", "intermediate", "advanced", "expert"]
-    },
+
     "summary": {
       "type": "string"
     },
+
+    "type": {
+      "type": "string",
+      "enum": [
+        "kata",
+        "buggy-codebase",
+        "simulation",
+        "case-study",
+        "challenge"
+      ]
+    },
+
+    "language": {
+      "type": "string"
+    },
+
+    "difficulty": {
+      "type": "string",
+      "enum": [
+        "beginner",
+        "intermediate",
+        "advanced",
+        "expert"
+      ]
+    },
+
+    "tags": {
+      "$ref": "#/$defs/stringList"
+    },
+
     "source": {
       "type": "object",
       "additionalProperties": false,
@@ -51,142 +75,203 @@
       "properties": {
         "kind": {
           "type": "string",
-          "enum": ["embedded", "github", "external", "generated"]
+          "enum": [
+            "github",
+            "embedded",
+            "external",
+            "generated"
+          ]
         },
+
         "upstream_repository": {
-          "type": "string",
-          "examples": ["emilybache/GildedRose-Refactoring-Kata"]
+          "type": "string"
         },
+
         "upstream_path": {
-          "type": "string",
-          "examples": ["python"]
+          "type": "string"
         },
+
         "local_path": {
-          "type": "string",
-          "examples": ["source/gilded-rose-python"]
+          "type": "string"
         },
+
         "license": {
           "type": "string"
         }
       }
     },
+
     "spaces": {
       "type": "object",
-      "additionalProperties": false,
       "required": ["primary"],
+      "additionalProperties": false,
       "properties": {
         "primary": {
-          "$ref": "#/definitions/slugList"
+          "$ref": "#/$defs/slugList"
         },
+
         "supporting": {
-          "$ref": "#/definitions/slugList"
+          "$ref": "#/$defs/slugList"
         }
       }
     },
+
     "required_capabilities": {
-      "$ref": "#/definitions/slugList"
+      "$ref": "#/$defs/slugList"
     },
+
     "recommended_roles": {
-      "$ref": "#/definitions/slugList"
+      "$ref": "#/$defs/slugList"
     },
+
+    "recommended_ai_employees": {
+      "$ref": "#/$defs/slugList"
+    },
+
+    "learning_objectives": {
+      "$ref": "#/$defs/stringList"
+    },
+
     "missions": {
       "type": "array",
       "minItems": 1,
       "items": {
-        "type": "object",
-        "additionalProperties": false,
-        "required": ["id", "title", "objective"],
-        "properties": {
-          "id": {
-            "type": "string",
-            "pattern": "^mission-[0-9]{2}(?:-[a-z0-9]+)*$"
-          },
-          "title": {
-            "type": "string"
-          },
-          "objective": {
-            "type": "string"
-          },
-          "spaces": {
-            "$ref": "#/definitions/slugList"
-          },
-          "required_capabilities": {
-            "$ref": "#/definitions/slugList"
-          },
-          "success_criteria": {
-            "$ref": "#/definitions/stringList"
-          }
-        }
+        "$ref": "#/$defs/mission"
       }
     },
+
     "success_criteria": {
-      "$ref": "#/definitions/stringList"
+      "$ref": "#/$defs/stringList"
     },
-    "scoring": {
-      "type": "object",
-      "additionalProperties": false,
-      "properties": {
-        "max_points": {
-          "type": "integer",
-          "minimum": 0
-        },
-        "dimensions": {
-          "type": "array",
-          "items": {
-            "type": "object",
-            "additionalProperties": false,
-            "required": ["id", "name", "points"],
-            "properties": {
-              "id": {
-                "type": "string",
-                "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"
-              },
-              "name": {
-                "type": "string"
-              },
-              "points": {
-                "type": "integer",
-                "minimum": 0
-              },
-              "description": {
-                "type": "string"
-              }
-            }
-          }
-        }
-      }
-    },
+
     "runtime": {
       "type": "object",
       "additionalProperties": false,
       "properties": {
-        "test_command": {
-          "type": "string",
-          "examples": ["python -m unittest"]
-        },
         "working_directory": {
+          "type": "string"
+        },
+
+        "test_command": {
+          "type": "string"
+        }
+      }
+    },
+
+    "validation": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "commands": {
+          "$ref": "#/$defs/stringList"
+        },
+
+        "success_exit_codes": {
+          "type": "array",
+          "items": {
+            "type": "integer"
+          }
+        }
+      }
+    },
+
+    "gameplay": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "estimated_duration_minutes": {
+          "type": "integer",
+          "minimum": 1
+        },
+
+        "single_player": {
+          "type": "boolean"
+        },
+
+        "multiplayer": {
+          "type": "boolean"
+        },
+
+        "recommended_team_size": {
+          "type": "integer",
+          "minimum": 1
+        }
+      }
+    },
+
+    "complexity": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "estimated_files": {
+          "type": "integer"
+        },
+
+        "risk_level": {
           "type": "string",
-          "examples": ["source/gilded-rose-python"]
+          "enum": [
+            "low",
+            "medium",
+            "high"
+          ]
         }
       }
     }
   },
-  "definitions": {
+
+  "$defs": {
+    "slug": {
+      "type": "string",
+      "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"
+    },
+
     "slugList": {
       "type": "array",
-      "minItems": 1,
-      "uniqueItems": true,
       "items": {
-        "type": "string",
-        "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"
-      }
+        "$ref": "#/$defs/slug"
+      },
+      "uniqueItems": true
     },
+
     "stringList": {
       "type": "array",
-      "minItems": 1,
       "items": {
-        "type": "string",
-        "minLength": 1
+        "type": "string"
+      }
+    },
+
+    "mission": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "title",
+        "objective"
+      ],
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+
+        "title": {
+          "type": "string"
+        },
+
+        "objective": {
+          "type": "string"
+        },
+
+        "spaces": {
+          "$ref": "#/$defs/slugList"
+        },
+
+        "required_capabilities": {
+          "$ref": "#/$defs/slugList"
+        },
+
+        "success_criteria": {
+          "$ref": "#/$defs/stringList"
+        }
       }
     }
   }
