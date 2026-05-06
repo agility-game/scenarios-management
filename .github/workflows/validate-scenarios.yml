@@ -1,67 +1,38 @@
-import json
-import pathlib
-import sys
+name: Validate Scenarios
 
-import frontmatter
-import jsonschema
+on:
+  push:
+    paths:
+      - "scenarios/**"
+      - "schemas/**"
+      - "scripts/**"
+      - "tests/**"
+      - "requirements-dev.txt"
+      - ".github/workflows/validate-scenarios.yml"
+  pull_request:
+    paths:
+      - "scenarios/**"
+      - "schemas/**"
+      - "scripts/**"
+      - "tests/**"
+      - "requirements-dev.txt"
+      - ".github/workflows/validate-scenarios.yml"
 
+jobs:
+  validate:
+    runs-on: ubuntu-latest
 
-ROOT = pathlib.Path(__file__).resolve().parent.parent
-SCHEMA_PATH = ROOT / "schemas" / "scenario.schema.json"
-SCENARIOS_PATH = ROOT / "scenarios"
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
 
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
 
-def main() -> int:
-    with open(SCHEMA_PATH, "r", encoding="utf-8") as file:
-        schema = json.load(file)
+      - name: Install dependencies
+        run: pip install -r requirements-dev.txt
 
-    validator = jsonschema.Draft7Validator(schema)
-    errors_found = False
-    validated_count = 0
-
-    scenario_files = sorted(SCENARIOS_PATH.glob("*.md"))
-
-    for md_file in scenario_files:
-        post = frontmatter.load(md_file)
-
-        # Skip normal markdown pages without scenario frontmatter
-        if not post.metadata:
-            print(f"Skipping: {md_file.name} (no frontmatter)")
-            continue
-
-        # Only validate files that opt into the scenario schema
-        if post.metadata.get("schema_kind") != "agility-game-scenario":
-            print(f"Skipping: {md_file.name} (not an Agility Game scenario)")
-            continue
-
-        validated_count += 1
-        print(f"Validating: {md_file.name}")
-
-        errors = sorted(
-            validator.iter_errors(post.metadata),
-            key=lambda error: list(error.path),
-        )
-
-        if errors:
-            errors_found = True
-            print("❌ Validation failed")
-
-            for error in errors:
-                path = ".".join(str(part) for part in error.path) or "<root>"
-                print(f"  - {path}: {error.message}")
-        else:
-            print("✅ Valid")
-
-    if validated_count == 0:
-        print("No Agility Game scenario markdown files found.")
-        return 1
-
-    if errors_found:
-        return 1
-
-    print(f"\nAll {validated_count} scenario(s) valid.")
-    return 0
-
-
-if __name__ == "__main__":
-    sys.exit(main())
+      - name: Validate scenarios
+        run: python scripts/validate-scenarios.py
