@@ -14,7 +14,8 @@
     "source",
     "spaces",
     "missions",
-    "success_criteria"
+    "success_criteria",
+    "schema_kind"
   ],
   "properties": {
     "$schema": {
@@ -24,6 +25,11 @@
     "schema_version": {
       "type": "string",
       "examples": ["1.0.0"]
+    },
+
+    "schema_kind": {
+      "type": "string",
+      "const": "agility-game-scenario"
     },
 
     "id": {
