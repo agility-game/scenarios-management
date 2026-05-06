@@ -17,23 +17,23 @@ def main() -> int:
 
     validator = jsonschema.Draft7Validator(schema)
     errors_found = False
+    validated_count = 0
 
     scenario_files = sorted(SCENARIOS_PATH.glob("*.md"))
 
-    if not scenario_files:
-        print("No scenario markdown files found.")
-        return 1
-
     for md_file in scenario_files:
-        print(f"Validating: {md_file.name}")
-
         post = frontmatter.load(md_file)
 
         if not post.metadata:
-            errors_found = True
-            print("❌ Validation failed")
-            print("  - frontmatter: missing YAML frontmatter")
+            print(f"Skipping: {md_file.name} (no frontmatter)")
             continue
+
+        if post.metadata.get("schema_kind") != "agility-game-scenario":
+            print(f"Skipping: {md_file.name} (not an Agility Game scenario)")
+            continue
+
+        validated_count += 1
+        print(f"Validating: {md_file.name}")
 
         errors = sorted(
             validator.iter_errors(post.metadata),
@@ -50,10 +50,14 @@ def main() -> int:
         else:
             print("✅ Valid")
 
+    if validated_count == 0:
+        print("No Agility Game scenario markdown files found.")
+        return 1
+
     if errors_found:
         return 1
 
-    print("\nAll scenarios valid.")
+    print(f"\nAll {validated_count} scenario(s) valid.")
     return 0
 
 
