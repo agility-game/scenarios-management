@@ -1,11 +1,10 @@
-# Schema Validation Tests
+# Scenario Validation Tests
 
 This directory contains:
-
-- valid scenario examples
-- invalid scenario examples
+- valid markdown scenarios
+- invalid markdown scenarios
 
 Purpose:
-- verify schema correctness
+- validate schema behavior
 - support SchemaStore submission
-- validate backward compatibility
+- prevent regressions
