@@ -8,6 +8,7 @@ on:
       - "scripts/**"
       - "tests/**"
       - "requirements-dev.txt"
+      - ".github/workflows/validate-scenarios.yml"
 
   pull_request:
     paths:
@@ -16,6 +17,7 @@ on:
       - "scripts/**"
       - "tests/**"
       - "requirements-dev.txt"
+      - ".github/workflows/validate-scenarios.yml"
 
 jobs:
   validate:
@@ -31,9 +33,7 @@ jobs:
           python-version: "3.12"
 
       - name: Install dependencies
-        run: |
-          pip install -r requirements-dev.txt
+        run: pip install -r requirements-dev.txt
 
       - name: Validate scenarios
-        run: |
-          python scripts/validate-scenarios.py
+        run: python scripts/validate-scenarios.py
