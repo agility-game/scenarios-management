@@ -1,1 +1,104 @@
+$schema: https://raw.githubusercontent.com/agility-game/scenarios-management/main/schemas/scenario.schema.json
 
+schema_version: 1.0.0
+
+id: gilded-rose-python
+
+title: The Gilded Rose Case
+
+summary: >
+  Refactor a legacy Python codebase safely while preserving behavior.
+
+type: kata
+
+language: python
+
+difficulty: intermediate
+
+tags:
+  - python
+  - legacy-code
+  - refactoring
+  - kata
+  - testing
+
+source:
+  kind: github
+  upstream_repository: emilybache/GildedRose-Refactoring-Kata
+  upstream_path: python
+  local_path: source/gilded-rose-python
+  license: MIT
+
+spaces:
+  primary:
+    - refactoring
+    - unit-tests
+    - technical-debt
+
+  supporting:
+    - ci-cd
+    - stories
+    - tasks
+
+required_capabilities:
+  - legacy-code-analysis
+  - characterization-testing
+  - refactoring
+  - maintainability-analysis
+
+recommended_roles:
+  - code-quality-investigator
+  - qa-engineer
+  - devops-engineer
+  - ci-cd-system-agent
+
+recommended_ai_employees:
+  - code-smell-detective
+  - marcus-rodriguez
+  - sarah-chen
+  - jenkins
+
+learning_objectives:
+  - understand legacy code
+  - preserve behavior
+  - add characterization tests
+  - refactor incrementally
+
+missions:
+  - id: mission-01-understand
+    title: Understand Current Behavior
+    objective: Analyze the code before changing it.
+
+  - id: mission-02-tests
+    title: Add Characterization Tests
+    objective: Protect existing behavior with tests.
+
+  - id: mission-03-refactor
+    title: Refactor Safely
+    objective: Improve structure while preserving behavior.
+
+success_criteria:
+  - all tests pass
+  - readability improved
+  - behavior preserved
+
+runtime:
+  working_directory: source/gilded-rose-python
+  test_command: python -m unittest
+
+validation:
+  commands:
+    - python -m unittest
+
+  success_exit_codes:
+    - 0
+
+gameplay:
+  estimated_duration_minutes: 90
+  single_player: true
+  multiplayer: true
+  recommended_team_size: 2
+
+complexity:
+  estimated_files: 5
+  risk_level: medium
