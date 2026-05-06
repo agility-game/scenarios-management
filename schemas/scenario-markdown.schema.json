@@ -1,1 +1,60 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://raw.githubusercontent.com/agility-game/scenarios-management/main/schemas/scenario-markdown.schema.json",
+  "title": "Agility Game Scenario Markdown",
+  "description": "Schema for markdown-based Agility Game scenarios using YAML frontmatter.",
+  "type": "object",
+  "additionalProperties": false,
 
+  "required": [
+    "frontmatter",
+    "markdown"
+  ],
+
+  "properties": {
+    "frontmatter": {
+      "$ref": "https://raw.githubusercontent.com/agility-game/scenarios-management/main/schemas/scenario.schema.json"
+    },
+
+    "markdown": {
+      "type": "string",
+      "description": "Markdown body containing story, missions, hints, walkthroughs, and gameplay narrative."
+    }
+  },
+
+  "examples": [
+    {
+      "frontmatter": {
+        "schema_version": "1.0.0",
+        "id": "dusty-golden-apples",
+        "title": "Dusty Golden Apples",
+        "type": "kata",
+        "difficulty": "intermediate",
+        "source": {
+          "kind": "github",
+          "upstream_repository": "emilybache/GildedRose-Refactoring-Kata",
+          "upstream_path": "python"
+        },
+        "spaces": {
+          "primary": [
+            "refactoring",
+            "unit-tests"
+          ]
+        },
+        "missions": [
+          {
+            "id": "mission-01-understand",
+            "title": "Understand Current Behavior",
+            "objective": "Analyze the legacy code before changing anything."
+          }
+        ],
+        "success_criteria": [
+          "behavior preserved",
+          "tests pass"
+        ]
+      },
+
+      "markdown": "# Dusty Golden Apples\n\nA legacy refactoring case inspired by the Gilded Rose kata."
+    }
+  ]
+}
